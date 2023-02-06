@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 int fieldSize = int.Parse(Console.ReadLine());
 string[,] field = new string[fieldSize, fieldSize];
@@ -10,6 +11,10 @@ int[] t2Position = new int[2] { -1, -1 };
 
 int[] carPosition = new int[2] { 0, 0 };
 
+char[] test = Console.ReadLine()
+    .Split(" ",StringSplitOptions.RemoveEmptyEntries)
+    .Select(char.Parse)
+    .ToArray();
 
 int totalDistance = 0;
 
